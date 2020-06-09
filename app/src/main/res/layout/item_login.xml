@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="holder"
+                type="com.seoul.culture.scene.login.LoginAdapter.LoginViewHolder"/>
+        <variable
+                name="data"
+                type="com.seoul.culture.model.UserData"/>
+        <variable
+                name="position"
+                type="Integer"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_patrol_select_off"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:onClick="@{()->holder.onItemClick(data)}">
+
+        <TextView
+                android:id="@+id/tv_upload_hint"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:includeFontPadding="false"
+                android:text="@{data.userNm}"
+                android:textColor="@color/font_normal"
+                android:textSize="12dp"
+                android:gravity="left|center_vertical"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="7dp"
+                android:autoSizeMaxTextSize="12dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/line"/>
+        <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_line_bg"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_upload_hint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

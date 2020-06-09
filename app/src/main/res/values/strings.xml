@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">SeoulCulturePatrol</string>
+
+    <string name="message_beaming_complete">Beaming complete</string>
+    <string name="hint_your_message">Your message</string>
+    <string name="label_your_message">Outgoing NFC message:</string>
+    <string name="title_btn_set">Set Message</string>
+    <string name="default_loading_patrol">Press the button to load people!</string>
+
+    <string name="login_text_hint_id">아이디</string>
+    <string name="login_text_hint_pw">패스워드</string>
+    <string name="login_btn">로그인</string>
+    <string name="login_validation">정보를 입력해주세요.</string>
+
+    <string name="fail_login">아이디 혹은 비밀번호를 다시 입력해주세요.</string>
+    <string name="fail_network_restart">네트워크 연결이 실패하였습니다.\n다시 시도해주세요.</string>
+    <string name="fail_network">네트워크 연결이 실패하였습니다.</string>
+
+    <string name="app_exit_title">한번 더 누르시면 종료됩니다.</string>
+    <string name="main_title">서울시 문화재 통합관제</string>
+    <string name="main_sub_title">서울시의 문화재는 우리의 소중한 재산입니다.</string>
+
+    <string name="main_banner_patrol_title">순찰 시작</string>
+    <string name="main_banner_patrol_sub_title">관심있게 지켜보는\n문화재의 순찰을 시작합니다.</string>
+
+    <string name="main_banner_report_title">이상 징후 보고</string>
+    <string name="main_banner_report_sub_title">문화재에 이상이 감지된다면...\n바로 신고해주세요!</string>
+
+    <string name="main_banner_emergency_report_title">긴급 신고</string>
+    <string name="main_banner_emergency_report_sub_title">긴급한 문제가 발생한다면...\n바로 신고해주세요!</string>
+
+    <string name="main_banner_manage_title">순찰 훈련</string>
+    <string name="main_banner_manage_sub_title">순찰 훈련을 시작합니다.</string>
+
+    <string name="main_btn_detail">자세히 보기</string>
+
+    <string name="main_bar_title">순찰 정보 안내</string>
+    <string name="patrol_bar_title">순찰 관리 시스템</string>
+    <string name="report_bar_title">이상징후 보고</string>
+    <string name="manage_bar_title">NFC 태그 등록</string>
+    <string name="training_bar_title">순찰 훈련</string>
+
+    <string name="drawer_greet">안녕하세요.%s님</string>
+    <string name="drawer_btn_login">로그인</string>
+    <string name="drawer_btn_logout">로그아웃</string>
+    <string name="drawer_logout_impossible">순찰 및 순찰 훈련을 완료해야 로그아웃이 가능합니다.</string>
+
+    <string name="drawer_menu1">순찰</string>
+    <string name="drawer_menu2">NFC 태그 등록</string>
+    <string name="drawer_menu3">NFC 태그 등록(입력)</string>
+    <string name="drawer_menu4">업데이트</string>
+
+    <string name="report_title">이상 징후 보고</string>
+    <string name="report_send">보고하기</string>
+    <string name="patrol_complete">순찰 완료</string>
+    <string name="patrol_no_list">등록된 순찰이 없습니다.</string>
+    <string name="patrol_nfc_tag">NFC 태그를 접촉하시기 바랍니다.</string>
+    <string name="patrol_start">순찰\n시작</string>
+    <string name="patrol_nfc_success">순찰 지역이 정상적으로 확인되었습니다.</string>
+    <string name="patrol_nfc_fail">순찰 지역의 태그가 불일치 합니다.</string>
+    <string name="patrol_complete_fail">순찰 완료 등록이 실패하였습니다. 다시 시도해주세요.</string>
+    <string name="patrol_complete_success">순찰 완료 등록에 성공했습니다.</string>
+
+
+    <string name="manage_insert_success">순찰 지역 등록이 성공했습니다.</string>
+    <string name="manage_insert_fail">순찰 지역 등록이 실패했습니다.</string>
+
+    <string name="manage_delete_success">순찰 지역 삭제가 성공했습니다.</string>
+    <string name="manage_delete_fail">순찰 지역 삭제가 실패했습니다.</string>
+    <string name="manage_nfc_success">NFC 태그가 인식되었습니다.</string>
+    <string name="manage_nfc_fail">쓸수 없는 NFC 태그입니다</string>
+    <string name="manage_nfc_isreadonly">쓰기가 불가능한 NFC 입니다.</string>
+    <string name="manage_nfc_max_tag">NFC 태그 크기가 너무 큽니다</string>
+    <string name="manage_nfc_write_impossible">해당 기능을 사용할 수 없습니다.</string>
+    <string name="manage_nfc_write_fail">NFC 쓰기에 실패하였습니다.</string>
+    <string name="manage_nfc_write_success">NFC 입력이 완료되었습니다.\n(%s)</string>
+    <string name="manage_nfc_server_success">NFC 입력 데이터 전송이 완료되었습니다.</string>
+    <string name="manage_nfc_picker_title">NFC 태그 선택</string>
+
+
+    <string name="report_image">이미지 업로드</string>
+    <string name="report_camera">카메라</string>
+    <string name="report_video">동영상 업로드</string>
+    <string name="report_hint">이상징후 내용을 적어주세요.\n(1,000) 자 이내</string>
+    <string name="report_complete_success">이상 징후 보고가 완료되었습니다.</string>
+    <string name="report_complete_fail">이상 징후 보고가 실패하였습니다.</string>
+
+    <string name="report_emergency_complete_success">긴급 보고가 완료되었습니다.</string>
+    <string name="report_emergency_complete_fail">긴급 보고에 실패하였습니다.</string>
+
+    <string name="report_empty_text">내용을 입력해주세요.</string>
+    <string name="report_permission_denied">권한이 거부되어 접근할 수 없습니다.</string>
+    <string name="report_permission_denied_alert">권한이 거부되어 접근할 수 없습니다. 허용하시려면 [설정]->[권한]에서 허용해주세요.</string>
+
+
+    <string name="report_write_text">이상징후 작성</string>
+    <string name="report_upload_text">자료 첨부</string>
+    <string name="report_upload_text_hint">보고자료를 첨부해주세요.</string>
+    <string name="report_btn_upload">+ 파일첨부</string>
+    <string name="report_pick_camera">카메라 선택</string>
+    <string name="report_pick_image">사진 선택</string>
+    <string name="report_pick_video">동영상 선택</string>
+    <string name="report_picker_title">앨범 선택</string>
+    <string name="report_picker_siren">신고</string>
+
+    <string name="permission_location_fine">위치 정보 허용</string>
+    <string name="permission_location_background">백그라운드 위치 정보 허용</string>
+
+    <string name="training_complete_success">순찰 훈련이 완료되었습니다.</string>
+    <string name="training_nfc_success">순찰 훈련 지역이 정상적으로 확인되었습니다.</string>
+    <string name="training_nfc_fail">순찰 훈련 지역의 태그가 불일치 합니다.</string>
+    <string name="training_complete_fail">순찰 훈련 완료가 실패하였습니다. 다시 시도해주세요.</string>
+    <string name="training_start">훈련\n시작</string>
+    <string name="training_empty_list">순찰 훈련 내용이 없습니다.</string>
+    <string name="training_not_complete">순찰 훈련이 완료되지 않았습니다.</string>
+
+    <string name="patrol_cancel_alert">진행 중인 순찰을 취소하시겠습니까?</string>
+    <string name="patrol_omission_complete_alert">해당 사항은 순찰지역이 누락되었습니다.\n누락된 상태로 완료하겠습니까?</string>
+
+
+    <string name="side_app_version">앱버전</string>
+    <string name="manage_btn_regist">순찰 지역 등록</string>
+    <string name="manage_btn_regist_nfc">NFC 등록</string>
+
+    <string name="logout_auto">자동 로그아웃 되었습니다.</string>
+
+    <string name="picker_cancel">취소</string>
+</resources>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="view"
+                type="com.seoul.culture.scene.manage.ManageInputFragment" />
+
+        <variable
+                name="viewModel"
+                type="com.seoul.culture.scene.manage.ManageInputViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_input"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                app:layout_constraintBottom_toTopOf="@id/btn_regist_nfc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                    style="@style/EditTextStyle"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    android:id="@+id/et_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container_patrol_bg"
+                    android:ems="10"
+                    android:gravity="center_vertical|left"
+                    android:hint="NFC_CODE"
+                    android:inputType="text"
+                    android:lineSpacingExtra="6dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textColor="@color/font_normal"
+                    android:textColorHint="@color/font_hint"
+                    android:textSize="12dp"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/et_lat"/>
+
+            <EditText
+                    style="@style/EditTextStyle"
+                    android:id="@+id/et_lat"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container_patrol_bg"
+                    android:ems="10"
+                    android:gravity="center_vertical|left"
+                    android:hint="위도"
+                    android:inputType="text"
+                    android:lineSpacingExtra="6dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:textColor="@color/font_normal"
+                    android:textColorHint="@color/font_hint"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_code"
+                    app:layout_constraintBottom_toTopOf="@id/et_lon"/>
+
+            <EditText
+                    style="@style/EditTextStyle"
+                    android:id="@+id/et_lon"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container_patrol_bg"
+                    android:ems="10"
+                    android:gravity="center_vertical|left"
+                    android:hint="경도"
+                    android:inputType="text"
+                    android:lineSpacingExtra="6dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textColor="@color/font_normal"
+                    android:textColorHint="@color/font_hint"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_lat"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+                android:id="@+id/btn_regist_nfc"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_patrol_btn_complete"
+                android:onClick="@{view::onClick}"
+                android:text="@string/manage_btn_regist_nfc"
+                android:textColor="@color/font_report_btn"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_input" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

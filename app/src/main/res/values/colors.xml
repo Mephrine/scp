@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#3877ec</color>
+
+<!--    <color name="transparent">##00000000</color>-->
+
+    <color name="pressed1">#ff5959</color>
+    <color name="pressed2">#524fff</color>
+
+    <color name="focused1">#ffe924</color>
+    <color name="focused2">#8bbee8</color>
+
+    <color name="default1">#f044e7</color>
+    <color name="default2">#3676f8</color>
+    <color name="default3">#f044e7</color>
+    <color name="default4">#3676f8</color>
+
+    <color name="color_666666">#666666</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_f4f5f9">#f4f5f9</color>
+
+    <color name="font_intro">#ffffff</color>
+
+    <color name="font_action_bar">#ffffff</color>
+    <color name="font_btn_logout">#ffffff</color>
+    <color name="font_drawer_normal">#000000</color>
+
+    <color name="font_report_btn">#ffffff</color>
+    <color name="font_hint">#999999</color>
+    <color name="font_normal">#000000</color>
+
+    <color name="font_patrol_select_on">#666666</color>
+    <color name="font_patrol_select_off">#000000</color>
+    <color name="font_patrol_btn">#ffffff</color>
+    <color name="font_nfc">#ffffff</color>
+
+
+    <color name="color_loading_indicator">#ffffff</color>
+
+    <color name="color_action_bar">#3877ec</color>
+    <color name="color_btn">#3877ec</color>
+    <color name="color_highlight">#3877ec</color>
+    <color name="color_highlight_circle">#e93324</color>
+
+    <color name="color_main_bg">#f4f5f9</color>
+    <color name="color_line_bg">#e5e5e5</color>
+    <color name="color_drawer_bg">#ffffff</color>
+    <color name="color_drawer_blank_bg">#f4f5f9</color>
+
+    <color name="color_report_container_bg">#ffffff</color>
+
+    <color name="color_patrol_select_on">#CC000000</color>
+    <color name="color_patrol_select_off">#ffffff</color>
+    <color name="color_patrol_btn">#ffffff</color>
+    <color name="color_patrol_btn_report">#4f5151</color>
+    <color name="color_patrol_btn_complete">#3877ec</color>
+    <color name="color_patrol_btn_upload">#319dcb</color>
+    <color name="color_patrol_nfc_bg">#CC000000</color>
+
+
+
+    <color name="color_main_banner_bg">#ffffff</color>
+    <color name="font_main_normal">#000000</color>
+</resources>

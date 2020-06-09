@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_navigation"
+            app:startDestination="@id/mainFragment">
+    <fragment android:id="@+id/mainFragment" android:name="com.seoul.culture.scene.main.MainFragment"
+              android:label="MainFragment">
+        <action android:id="@+id/action_mainFragment_to_reportFragment" app:destination="@id/reportFragment"
+                app:enterAnim="@anim/slide_from_right"
+                app:exitAnim="@anim/slide_to_left"
+                app:popEnterAnim="@anim/slide_from_left"
+                app:popExitAnim="@anim/slide_to_right"/>
+        <action android:id="@+id/action_mainFragment_to_patrolFragment" app:destination="@id/patrolFragment"
+                app:enterAnim="@anim/slide_from_right"
+                app:exitAnim="@anim/slide_to_left"
+                app:popEnterAnim="@anim/slide_from_left"
+                app:popExitAnim="@anim/slide_to_right"/>
+        <action android:id="@+id/action_mainFragment_to_manageAreaFragment" app:destination="@id/manageAreaFragment"
+                app:enterAnim="@anim/slide_from_right"
+                app:exitAnim="@anim/slide_to_left"
+                app:popEnterAnim="@anim/slide_from_left"
+                app:popExitAnim="@anim/slide_to_right"/>
+        <action android:id="@+id/action_mainFragment_to_trainingFragment" app:destination="@id/trainingFragment"
+                app:enterAnim="@anim/slide_from_right" app:exitAnim="@anim/slide_to_left"
+                app:popEnterAnim="@anim/slide_from_left" app:popExitAnim="@anim/slide_to_right"/>
+        <action
+                android:id="@+id/action_mainFragment_to_manageInputFragment"
+                app:destination="@id/manageInputFragment"
+                app:enterAnim="@anim/slide_from_right"
+                app:exitAnim="@anim/slide_to_left"
+                app:popEnterAnim="@anim/slide_from_left"
+                app:popExitAnim="@anim/slide_to_right"/>
+    </fragment>
+    <fragment android:id="@+id/reportFragment" android:name="com.seoul.culture.scene.report.ReportFragment"
+              android:label="ReportFragment"/>
+    <fragment android:id="@+id/patrolFragment" android:name="com.seoul.culture.scene.patrol.PatrolFragment"
+              android:label="PatrolFragment">
+        <action android:id="@+id/action_patrolFragment_to_reportFragment" app:destination="@id/reportFragment"
+                app:enterAnim="@anim/slide_from_right" app:exitAnim="@anim/slide_to_left"
+                app:popEnterAnim="@anim/slide_from_left" app:popExitAnim="@anim/slide_to_right"/>
+    </fragment>
+    <fragment android:id="@+id/manageAreaFragment" android:name="com.seoul.culture.scene.manage.ManageAreaFragment"
+              android:label="ManageAreaFragment"/>
+    <fragment android:id="@+id/trainingFragment" android:name="com.seoul.culture.scene.training.TrainingFragment"
+              android:label="TrainingFragment"/>
+    <fragment
+            android:id="@+id/manageInputFragment"
+            android:name="com.seoul.culture.scene.manage.ManageInputFragment"
+            android:label="ManageInputFragment" />
+</navigation>

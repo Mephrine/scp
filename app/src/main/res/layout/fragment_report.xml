@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="view"
+                type="com.seoul.culture.scene.report.ReportFragment" />
+
+        <variable
+                name="viewModel"
+                type="com.seoul.culture.scene.report.ReportViewModel" />
+    </data>
+
+    <ScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:id="@+id/review_full_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:onClick="@{view::onClick}"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_upload_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    app:layout_constraintBottom_toTopOf="@id/layout_upload"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="spread">
+
+                <TextView
+                        android:id="@+id/tv_upload"
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/report_upload_text"
+                        android:textColor="@color/font_normal"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btn_upload"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                <Button
+                        android:id="@+id/btn_upload"
+                        style="@style/ButtonStyle"
+                        android:layout_width="60dp"
+                        android:layout_height="18dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/btn_upload"
+                        android:onClick="@{view::showAlertDialog}"
+                        android:text="@string/report_btn_upload"
+                        android:textColor="@color/font_report_btn"
+                        android:textSize="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_upload"
+                        app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/container_patrol_bg"
+                    android:onClick="@{view::showAlertDialog}"
+                    app:layout_constraintBottom_toTopOf="@id/tv_report"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_upload_top">
+
+                <ImageView
+                        android:id="@+id/iv_report"
+                        android:layout_width="41dp"
+                        android:layout_height="36dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_pic_4"
+                        app:layout_constraintBottom_toTopOf="@id/tv_upload_hint"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                        android:id="@+id/tv_upload_hint"
+                        style="@style/TextViewStyle_Light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/report_upload_text_hint"
+                        android:textColor="@color/font_hint"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_report" />
+
+                <ImageView
+                        android:id="@+id/iv_upload"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:onClick="@{view::showAlertDialog}"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_pic_4"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                    android:id="@+id/tv_report"
+                    style="@style/TextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="18dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/report_write_text"
+                    android:textColor="@color/font_normal"
+                    android:textSize="15dp" />
+
+            <EditText
+                    android:id="@+id/et_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="14dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/container_patrol_bg"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="@string/report_hint"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="6dp"
+                    android:minHeight="266dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="false"
+                    android:textColor="@color/font_normal"
+                    android:textColorHint="@color/font_hint"
+                    android:textSize="12dp" />
+
+            <Button
+                    android:id="@+id/btn_send"
+                    style="@style/ButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/color_btn"
+                    android:text="@string/report_send"
+                    android:textColor="@color/font_report_btn"
+                    android:textSize="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

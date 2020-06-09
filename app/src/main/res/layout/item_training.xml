@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="holder"
+                type="com.seoul.culture.scene.training.TrainingAdapter.TrainingViewHolder"/>
+        <variable
+                name="data"
+                type="com.seoul.culture.model.TrainingData"/>
+        <variable
+                name="position"
+                type="Integer"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item_training"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_patrol_select_off"
+            android:onClick="@{()->holder.onItemClick(data)}">
+
+        <TextView
+                android:id="@+id/tv_item"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:autoSizeMaxTextSize="12dp"
+                android:autoSizeMinTextSize="7dp"
+                android:autoSizeTextType="uniform"
+                android:background='@{data.placeTime.isEmpty() ? @color/color_patrol_select_off : @color/color_patrol_select_on }'
+                android:fontFamily="@font/font_family"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="10dp"
+                android:text="@{data.orderMsg}"
+                android:textColor='@{data.placeTime.isEmpty() ? @color/font_patrol_select_off : @color/font_patrol_select_on }'
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+<!--        <View-->
+<!--                android:id="@+id/v_line"-->
+<!--                android:layout_width="match_parent" android:layout_height="1dp"-->
+<!--                android:background="@color/font_hint"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/tv_divn"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tv_item"/>-->
+<!--        <TextView-->
+<!--                android:id="@+id/tv_divn"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:autoSizeMaxTextSize="10dp"-->
+<!--                android:autoSizeMinTextSize="7dp"-->
+<!--                android:autoSizeTextType="uniform"-->
+<!--                android:fontFamily="@font/font_family"-->
+<!--                android:gravity="start"-->
+<!--                android:includeFontPadding="false"-->
+<!--                android:padding="10dp"-->
+<!--                android:text="@{data.orderMsg}"-->
+<!--                android:textColor='@color/font_normal'-->
+<!--                android:textSize="11dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/v_line"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
